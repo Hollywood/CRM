@@ -1,4 +1,4 @@
-name: Automated Contract Testing
+name: Automated Contract Testing and Spec Generation
 
 on: 
   - workflow_dispatch
