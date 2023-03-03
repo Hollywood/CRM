@@ -1,0 +1,18 @@
+name: Automated Contract Testing
+
+on: 
+  - workflow_dispatch
+
+jobs:
+  automated-api-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Postman CLI
+        run: |
+          curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
+      - name: Login to Postman CLI
+        run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
+      - name: Run API tests
+        run: |
+          postman collection run "26125248-5e198e19-cf21-4308-af8e-8057f39f0185" -e "26125248-cfc71894-39f1-4b84-ae6e-3f04931adf69" --iteration-data "${{ github.workspace }}/utils/spec_locations.csv" --iteration-count 1
