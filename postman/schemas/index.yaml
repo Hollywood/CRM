@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   version: 1.3.0
   title: CRM
-  description: "Welcome to the CRM API for Cisco."
+  description: "Welcome to the CRM API."
   contact:
     email: admin@newcrm.com
     url: 'https://developers.apideck.com'
