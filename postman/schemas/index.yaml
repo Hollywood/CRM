@@ -16,10 +16,6 @@ servers:
     description: QA
   - url: 'https://3dd7abdc-4d0e-4a9c-a3b9-59998a897c70.mock.pstmn.io'
     description: Dev
-security:
-  - apiKey: []
-    applicationId: [ ]
-    consumerId: [ ]
 tags:
   - name: Leads
     description: ''
