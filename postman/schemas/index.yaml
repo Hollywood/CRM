@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   version: 1.3.0
   title: CRM
-  description: "Welcome to the CRM API for JPMC."
+  description: "Welcome to the CRM API for RBC."
   contact:
     email: admin@newcrm.com
     url: 'https://developers.apideck.com'
@@ -16,6 +16,10 @@ servers:
     description: QA
   - url: 'https://3dd7abdc-4d0e-4a9c-a3b9-59998a897c70.mock.pstmn.io'
     description: Dev
+security:
+  - apiKey: []
+    applicationId: [ ]
+    consumerId: [ ]
 tags:
   - name: Leads
     description: ''
@@ -130,8 +134,8 @@ components:
         - email
       properties:
         id:
-          type: string
-          example: '12345'
+          type: integer
+          example: 12345
           readOnly: true
         owner_id:
           type: string
