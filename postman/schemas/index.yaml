@@ -1,8 +1,8 @@
 openapi: 3.0.3
 info:
   version: 1.3.0
-  title: CRM
-  description: "Welcome to the CRM API."
+  title: Customer Resource
+  description: "Welcome to the CRM API for RBC."
   contact:
     email: admin@newcrm.com
     url: 'https://developers.apideck.com'
@@ -134,8 +134,8 @@ components:
         - email
       properties:
         id:
-          type: string
-          example: '12345'
+          type: integer
+          example: 12345
           readOnly: true
         owner_id:
           type: string
